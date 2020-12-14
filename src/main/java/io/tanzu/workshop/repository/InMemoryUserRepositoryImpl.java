@@ -1,12 +1,14 @@
 package io.tanzu.workshop.repository;
 
 import io.tanzu.workshop.model.User;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+@Repository("userRepository")
 public class InMemoryUserRepositoryImpl implements UserRepository {
 
     private static List<User> users = new ArrayList<>();
